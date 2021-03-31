@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Gráfico de Marcas</title>
+	<style type="text/css">
+		*{font-family: Arial;}
+	</style>
+</head>
+<body>
+	<div style="background-color: #1E90FF; margin: -20px;">
+		<h3 style="color: #FFF; margin-left: 15px; font-size: 17px; padding: 7px;">Menu</h3>
+		<h3 style="margin-top: -50px; margin-left: 165px; color: #FFF; font-size: 17px; padding: 7px;">User Name</h3>
+		<h3 style="margin-top: -50px; margin-left: 800px; color: #FFF; font-size: 17px; padding: 7px;">Sales Report</h3>
+	</div>
+	<div style="background-color: red; width: 20px; height: 20px; border-radius: 50%; margin-left: 128px; margin-top: -47px;"></div>
+	<div>
+		<p style="margin-left: 240px; font-size: 12px; margin-top: 20px;">Category:</p>
+		<p style="margin-left: 540px; font-size: 12px; margin-top: -20px;">Products:</p>
+		<p style="margin-left: 855px; font-size: 12px; margin-top: -25px;">Brands:</p>
+		<form action="#" method="get" style="margin-top: -30px">
+			<select style="margin-left: 300px;">
+				<option id="food">Food</option>
+				<option>Pants</option>
+				<option>Shoes</option>
+			</select>
+			<select style="margin-left: 230px;">
+				<option>Careals</option>
+				<option>Meat</option>
+			</select>
+			<select style="margin-left: 230px;">
+				<option>Careals1</option>
+				<option>Meat1</option>
+			</select>
+		</form>
+	</div>
+	<div id="container" style="width:100%; height:400px; margin-top: 20px;">
+		<script type="text/javascript">
+					document.addEventListener('DOMContentLoaded', () => {
+					        const chart = Highcharts.chart('container', {
+					            chart: {
+					                type: 'column'
+					            },
+					            title: {
+					                text: 'Sales By Month For:'
+					            },
+					            xAxis: {
+					       			title: {
+					       				text: 'Mouths'
+					       			},
+					               	categories: ['January', 'February', 'March', 'April']
+					            },
+					            yAxis: {
+					                title: {
+					                    text: 'Sales'
+					                }
+					            },
+					            series: [{
+					                name: 'Cereal',
+					                data: [100, 450, 400, 550]
+					            }]
+					        });
+					    });
+		</script>
+	</div>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="/js/highstock.js"></script>
+	<script src="/js/highmaps.js"></script>
+	<script src="/js/highcharts.js"></script>
+	<script src="/js/modules/stock.js"></script>
+	<script src="/js/modules/map.js"></script>
+</body>
+</html>
